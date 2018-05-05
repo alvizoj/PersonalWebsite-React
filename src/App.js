@@ -33,6 +33,7 @@ class App extends Component {
             case "Contact":
                 return <ContactScreen/>;
             default:
+                throw Error(`Invalid screen state: ${this.state.screenName}`);
         }
     }
 

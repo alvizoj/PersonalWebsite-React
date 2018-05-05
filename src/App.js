@@ -32,6 +32,7 @@ class App extends Component {
                 return <AboutScreen/>;
             case "Contact":
                 return <ContactScreen/>;
+            default:
         }
     }
 

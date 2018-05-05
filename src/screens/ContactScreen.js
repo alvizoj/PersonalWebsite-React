@@ -8,10 +8,10 @@ export default class HomeScreen extends React.Component {
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Home</h1>
+                    <h1 className="App-title">About</h1>
                 </header>
                 <p className="App-intro">
-                    To get started, edit <code>src/HomeScreen.js</code> and save to reload.
+                    To get started, edit <code>src/ContactScreen.js</code> and save to reload.
                 </p>
             </div>
         );

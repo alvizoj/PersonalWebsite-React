@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../logo.svg';
 import '../App.css';
 
+/* Change Logo here */
 export default class HomeScreen extends React.Component {
     render() {
         return (

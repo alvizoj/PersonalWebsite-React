@@ -8,7 +8,6 @@ export default class HomeScreen extends React.Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">Home</h1>
                 </header>
                 <p className="App-intro">

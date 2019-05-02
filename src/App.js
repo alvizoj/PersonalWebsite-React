@@ -53,11 +53,6 @@ class App extends Component {
         );
     };
 
-
-    renderScreen() {
-        
-    }
-
     render() {
         return (
             <div>

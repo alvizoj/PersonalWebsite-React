@@ -4,6 +4,26 @@ import AboutScreen from './screens/AboutScreen';
 import ContactScreen from './screens/ContactScreen';
 import {Button, Segment} from 'semantic-ui-react';
 
+
+/**
+ * Renders a single screen component
+ * @param {object} props
+ * @param {string} props.screen 
+ */
+function ScreenRouter(props) {
+    switch(props.screen) {
+        case "Home":
+            return <HomeScreen/>;
+        case "About":
+            return <AboutScreen/>;
+        case "Contact":
+            return <ContactScreen/>;
+        default:
+            throw Error(`Invalid screen state: ${this.state.screenName}`);
+    }
+}
+
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -35,16 +55,7 @@ class App extends Component {
 
 
     renderScreen() {
-        switch(this.state.screenName) {
-            case "Home":
-                return <HomeScreen/>;
-            case "About":
-                return <AboutScreen/>;
-            case "Contact":
-                return <ContactScreen/>;
-            default:
-                throw Error(`Invalid screen state: ${this.state.screenName}`);
-        }
+        
     }
 
     render() {
@@ -67,9 +78,7 @@ class App extends Component {
 
                 </div>
 
-                <div>
-                    {this.renderScreen()}
-                </div>
+                <ScreenRouter screen={this.state.screenName} />
             </div>
         );
     }

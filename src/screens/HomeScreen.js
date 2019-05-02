@@ -1,15 +1,14 @@
 import React from 'react';
-import logo from '../logo.svg';
 import '../App.css';
 
-/* Change Logo here */
 export default class HomeScreen extends React.Component {
+    componentDidMount(){
+        document.title = "Joseph Alvizo - Home"
+    }
+
     render() {
         return (
             <div className="App">
-                <header className="App-header">
-                    <h1 className="App-title">Home</h1>
-                </header>
                 <p className="App-intro">
                     To get started, edit <code>src/HomeScreen.js</code> and save to reload.
                 </p>

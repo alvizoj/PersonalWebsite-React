@@ -42,13 +42,16 @@ class App extends Component {
         return (
             <div>
                 <div className="Navbar">
-                    <h1 style={{color: "#54c8ff", margin: 0}}>My Website</h1>
-                    <div className="NavbarButtons">
+                    <h1 style={{color: "#54c8ff", margin: 0}}>josephalvizo.com</h1>
+                    <div>
                     {this.renderNavItem("Home")}
                     {this.renderNavItem("About")}
                     {this.renderNavItem("Contact")}
                     </div>
                 </div>
+                <header className="App-header">
+                    <h1 className="App-title">Welcome!</h1>
+                </header>
 
                 <ScreenRouter screen={this.state.screenName} />
             </div>

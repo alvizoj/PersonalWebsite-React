@@ -31,46 +31,23 @@ class App extends Component {
     }
 
     renderNavItem(screenName) {
-        let navItemStyle = {marginLeft: 20, marginRight: 20};
         return(
-            <Button inverted color= 'blue'
-                    onClick={() => {
-                        this.setState({screenName});
-                    }}
-            >
+            <Button inverted className="NavbarButton" color= 'blue' onClick={() => this.setState({screenName})}>
                 {screenName}
             </Button>
-            /*
-            <span
-                style = {navItemStyle}
-                onClick={() => {
-                    this.setState({screenName});
-                }}
-            >
-
-                {screenName}
-            </span> */
         );
     };
 
     render() {
         return (
             <div>
-                <div
-                    style={{
-                        height: 40,
-                        width: "100%",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        backgroundColor: "grey",
-
-                    }}
-                >
-                    {this.renderNavItem("Home")}
-                    {this.renderNavItem("About")}
-                    {this.renderNavItem("Contact")}
-
+                <div className="Navbar">
+                    <h1 style={{color: "#54c8ff", margin: 0}}>My Website</h1>
+                    <div className="NavbarButtons">
+                        {this.renderNavItem("Home")}
+                        {this.renderNavItem("About")}
+                        {this.renderNavItem("Contact")}
+                    </div>
                 </div>
 
                 <ScreenRouter screen={this.state.screenName} />

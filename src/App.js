@@ -42,7 +42,7 @@ class App extends Component {
         return (
             <div>
                 <div className="Navbar">
-                    <h1 style={{color: "#54c8ff", margin: 0}}>josephalvizo.com</h1>
+                    <h1 className="HeaderText">josephalvizo.com</h1>
                     <div>
                     {this.renderNavItem("Home")}
                     {this.renderNavItem("About")}

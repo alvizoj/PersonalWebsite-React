@@ -20,7 +20,6 @@ const Projects = [
         picture: Selfie,
         pictureCaption: "",
         link: "https://github.com/alvizoj/CS112-Project1",
-
         titleClassName: "ProjectTitle2",
         backgroundClassName: "ProjectsBackground2",
     },

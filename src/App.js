@@ -31,11 +31,20 @@ class App extends Component {
     }
 
     renderNavItem(screenName) {
-        return(
-            <Button inverted className="NavbarButton" color="blue" onClick={() => this.setState({screenName})}>
-                {screenName}
-            </Button>
-        );
+        if (screenName === this.state.screenName) {
+            return (
+                <Button inverted active className="NavbarButton" color="blue" onClick={() => this.setState({screenName})}>
+                    {screenName}
+                </Button>
+            );
+        }
+        else {
+            return (
+                <Button inverted className="NavbarButton" color="blue" onClick={() => this.setState({screenName})}>
+                    {screenName}
+                </Button>
+            );
+        }
     };
 
     render() {

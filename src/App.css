@@ -2,13 +2,6 @@
     text-align: center;
 }
 
-.HeaderText {
-    color: #54c8ff;
-    margin: 0px;
-    padding-bottom: 4px;
-    padding-right: 255px;
-}
-
 .Navbar {
     padding: 10px 20px;
     width: 100%;
@@ -18,6 +11,13 @@
     display: flex;
     align-items: center;
     background-color: #383838;
+}
+
+.NavbarText {
+    color: #54c8ff;
+    margin: 0px;
+    padding-bottom: 4px;
+    flex: 0%;
 }
 
 .NavbarButton {
@@ -31,13 +31,21 @@
 .App-header {
     background-image: url("resources/carbonFiber.png");
     background-repeat: repeat;
-    height: 150px;
+    height: 130px;
 }
 
-.App-title {
-    font-size: 1.5em;
+.AppHeaderTitle {
+    font-size: 3em;
+    font-family: 'Playfair Display', serif;
     text-align: center;
-    color: white;
+    color: #d9d6d8;
+}
+
+.HeaderDescription {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #d9d6d8;
 }
 
 .App-intro {
@@ -48,4 +56,138 @@
 .BodyContent {
     background-image: url("resources/dark-matter.jpg");
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.SideContent {
+    flex: 32%;
+    padding-top: 5px;
+}
+
+.MainContent {
+    flex: 68%;
+    padding-right: 10px;
+    text-align: center;
+    justify-items: center;
+}
+
+.MyPhoto {
+    height: 300px;
+    width: 300px;
+}
+
+.Footer {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 2px 2px;
+    text-align: center;
+    background-color: #54c8ff;
+}
+
+.ProjectTitle1 {
+    background-color: #0d1121;
+    padding-bottom: 10px;
+    margin: 0px 0px 0px 0px;
+    color: #7d8cbb;
+}
+
+.ProjectTitle2 {
+    background-color: #124f90;
+    padding-bottom: 10px;
+    margin: 0px 0px 0px 0px;
+    color: #d9d6d8;
+}
+
+.ProjectsBackground1 {
+    background-color: #0d1121;
+    display: flex;
+}
+
+.ProjectsBackground2 {
+    background-color: #124f90;
+    display: flex;
+}
+
+.ProjectDescriptionText {
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #d9d6d8;
+}
+
+.ui.inverted.button {
+    /*background: transparent none;*/
+    /*box-shadow: 0 0 0 2px inset!important;*/
+    /*text-shadow: none!important;*/
+}
+
+.ui.inverted.button:hover {
+    box-shadow: none!important;
+    text-shadow: none!important;
+}
+
+.LinkButton {
+    box-shadow: 0 0 0 2px #7d8cbb inset!important;;
+    /*background: transparent none;*/
+    /*text-shadow: none !important;*/
+    /*margin: 0px 8px !important;*/
+    color: #7d8cbb !important;
+    border-color: #7d8cbb !important;
+}
+
+.LinkButton:hover {
+    background: #7d8cbb !important;
+    box-shadow: 0 0 0 2px #7d8cbb inset!important;
+    color: white !important;
+}
+
+.LinkButton2 {
+    box-shadow: 0 0 0 2px #bab2b7 inset!important;;
+    background: transparent none;
+    text-shadow: none !important;
+    margin: 0px 8px !important;
+    color: #bab2b7 !important;
+    border-color: #bab2b7 !important;
+}
+
+.LinkButton2:hover {
+    background: #bab2b7 !important;
+    box-shadow: 0 0 0 2px #bab2b7 inset!important;
+    color: #124f90 !important;
+}
+
+.MailButton {
+    background-color: orange;
+    border: black;
+    border-radius: 4px;
+    color: white;
+    vertical-align: center;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.ContactInformation {
+    background-color: #0d1121;
+}
+
+.ContactContent {
+    align-items: center;
+    align-content: center;
+    padding-bottom: 10px;
+}
+
+.GmailIcon {
+    width: 40px;
+    height: 42px;
+    top: 16px;
+    position: relative;
+}
+
+.ui.segment {
+    background-color: #0d1121;
 }

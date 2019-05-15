@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HomeScreen from './screens/HomeScreen';
-import AboutScreen from './screens/AboutScreen';
+import ProjectsScreen from './screens/ProjectsScreen';
 import ContactScreen from './screens/ContactScreen';
 import {Button} from 'semantic-ui-react';
 
@@ -14,8 +14,8 @@ function ScreenRouter(props) {
     switch(props.screen) {
         case "Home":
             return <HomeScreen/>;
-        case "About":
-            return <AboutScreen/>;
+        case "Projects":
+            return <ProjectsScreen/>;
         case "Contact":
             return <ContactScreen/>;
         default:
@@ -42,16 +42,13 @@ class App extends Component {
         return (
             <div>
                 <div className="Navbar">
-                    <h1 className="HeaderText">josephalvizo.com</h1>
+                    <h1 className="NavbarText">josephalvizo.com</h1>
                     <div>
                     {this.renderNavItem("Home")}
-                    {this.renderNavItem("About")}
+                    {this.renderNavItem("Projects")}
                     {this.renderNavItem("Contact")}
                     </div>
                 </div>
-                <header className="App-header">
-                    <h1 className="App-title">Welcome!</h1>
-                </header>
 
                 <ScreenRouter screen={this.state.screenName} />
             </div>

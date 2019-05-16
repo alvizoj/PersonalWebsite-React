@@ -3,6 +3,7 @@ import HomeScreen from './screens/HomeScreen';
 import ProjectsScreen from './screens/ProjectsScreen';
 import ContactScreen from './screens/ContactScreen';
 import {Button} from 'semantic-ui-react';
+import ProjectInspectScreen from "./screens/ProjectInspectScreen";
 
 
 /**
@@ -16,6 +17,11 @@ function ScreenRouter(props) {
             return <HomeScreen/>;
         case "Projects":
             return <ProjectsScreen/>;
+        case "Website":
+            return <ProjectInspectScreen
+                HeaderTitle='Personal Website Project'
+                mainh1='main content!!!'
+                />;
         case "Contact":
             return <ContactScreen/>;
         default:
@@ -56,6 +62,7 @@ class App extends Component {
                     {this.renderNavItem("Home")}
                     {this.renderNavItem("Projects")}
                     {this.renderNavItem("Contact")}
+                    {this.renderNavItem("Website")}
                     </div>
                 </div>
 

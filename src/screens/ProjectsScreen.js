@@ -2,6 +2,9 @@ import React from 'react';
 import '../App.css';
 import Selfie from '../resources/me.png';
 import {Button} from 'semantic-ui-react';
+import '../App.js';
+import ProjectInspectScreen from './ProjectInspectScreen.js';
+
 
 const Projects = [
     {
@@ -9,8 +12,8 @@ const Projects = [
         description: "This is my personal website done using the React.JS front-end framework.",
         picture: Selfie,
         pictureCaption: "Photo of Joseph",
+        individualProjectScreen: "Website",
         link: "https://github.com/alvizoj/PersonalWebsite-React",
-
         titleClassName: "ProjectTitle1",
         backgroundClassName: "ProjectsBackground1",
     },
@@ -19,6 +22,7 @@ const Projects = [
         description: "Graphics program displaying letters rotating 'UCI'.",
         picture: Selfie,
         pictureCaption: "",
+        individualProjectScreen: "WebGL-Program1",
         link: "https://github.com/alvizoj/CS112-Project1",
         titleClassName: "ProjectTitle2",
         backgroundClassName: "ProjectsBackground2",
@@ -39,7 +43,7 @@ function Project(props) {
             </div>
             <div className="MainContent">
                 <h1 className="HeaderDescription">{props.description}</h1>
-                <Button inverted className="LinkButton" onClick={() => window.open(props.link)}>
+                <Button inverted className="LinkButton" onClick={() => this.setState("Website")}>
                     View Project
                 </Button>
             </div>
@@ -47,7 +51,19 @@ function Project(props) {
     ];
 }
 
+function ScreenRouter(props) {
+    switch(props.screen) {
+        case "Website":
+            return <ProjectInspectScreen/>;
+    }
+}
+
 export default class ProjectsScreen extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {screenName: "Projects"};
+    }
+
     componentDidMount(){
         document.title = "My Projects"
     }

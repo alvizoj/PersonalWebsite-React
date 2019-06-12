@@ -62,7 +62,6 @@ class App extends Component {
                     {this.renderNavItem("Home")}
                     {this.renderNavItem("Projects")}
                     {this.renderNavItem("Contact")}
-                    {this.renderNavItem("Website")}
                     </div>
                 </div>
 

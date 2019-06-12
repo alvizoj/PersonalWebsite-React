@@ -43,7 +43,7 @@ function Project(props) {
             </div>
             <div className="MainContent">
                 <h1 className="HeaderDescription">{props.description}</h1>
-                <Button inverted className="LinkButton" onClick={() => this.setState("Website")}>
+                <Button inverted className="LinkButton">
                     View Project
                 </Button>
             </div>
@@ -51,17 +51,9 @@ function Project(props) {
     ];
 }
 
-function ScreenRouter(props) {
-    switch(props.screen) {
-        case "Website":
-            return <ProjectInspectScreen/>;
-    }
-}
-
 export default class ProjectsScreen extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {screenName: "Projects"};
     }
 
     componentDidMount(){
